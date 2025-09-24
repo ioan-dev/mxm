@@ -42,3 +42,34 @@
     display: none !important;
   }
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.is-loading {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.chars {
+  visibility: hidden;
+  opacity: 0;
+}
+
+[data-fouc] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// DEV
+
+.dev-hidden {
+  display: none;
+}
+
+.dev-outline {
+  outline: tomato solid 1px;
+}

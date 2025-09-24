@@ -3,7 +3,7 @@ import {defineConfig} from 'vite';
 import path from 'path';
 
 export default defineConfig({
-    base: '/starter/',
+    base: '/mxm/',
     css: {
         devSourcemap: true
     },

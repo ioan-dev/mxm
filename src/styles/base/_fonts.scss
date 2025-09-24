@@ -8,11 +8,29 @@
 // Extra Bold/Ultra Bold - 800
 // Black/Heavy - 900
 
+$font-path: '/fonts';
+
 
 @font-face {
-  font-family: 'MyFont';
-  //src: url(var(--font-primary)) format('woff2');
-  font-weight: 400;
+  font-family: VelaSans;
+  src: url('#{$font-path}/VelaSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: VelaSans;
+  src: url('#{$font-path}/VelaSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: InterTight;
+  src: url('#{$font-path}/InterTight-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }

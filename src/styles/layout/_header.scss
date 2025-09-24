@@ -1,10 +1,58 @@
 @use "../abstracts" as *;
 
 .header {
+  //display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  min-height: 175px;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0) 100%);
 
   &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    padding-block: var(--spacing-m);
+  }
+
+  &__body {
+    grid-column: 5 / span 8;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    @include flex-center();
+  }
+
+  &__nav-list {
+    display: flex;
+    column-gap: var(--spacing-s);
+  }
+
+  &__nav-item {
+    overflow: hidden;
+  }
+
+  &__nav-link {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__switcher {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__btn {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
   }
 
   &__overlay {
@@ -34,9 +82,19 @@
 
   &__menu-link {
 
+
+
     &.is-active {
       color: tomato;
       pointer-events: none;
     }
   }
+
+  // Удалить
+
+  .char {
+    line-height: 1.4;
+    //border: 1px solid tomato;
+  }
+
 }

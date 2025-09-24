@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.switcher {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+  border: 1px solid transparent;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+
+  color: var(--color-text-primary);
+
+  &:hover {
+    color: var(--color-text-secondary);
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+
+  }
+
+  &__text, &__icon {
+    color: inherit;
+  }
+}

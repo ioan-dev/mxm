@@ -1,0 +1,70 @@
+@use "../abstracts" as *;
+
+.favorites {
+  padding-top: 90px;
+  padding-bottom: var(--section-padding-y);
+
+  &__title {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &__grid {
+    row-gap: 48px;
+  }
+
+  &__item {
+    grid-column: span 2;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    cursor: pointer;
+
+    &--active {
+      & .favorites__image-wrapper::before {
+        opacity: 0;
+      }
+
+      & .favorites__case-name span {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: rgba(#0D0D0D, 0.8);
+      transition: opacity 0.3s ease; /* Добавляем плавный переход для opacity */
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__image {}
+
+  &__case-name {
+    display: flex;
+    padding-left: 8px;
+    overflow: hidden;
+
+    span {
+      transform: translateY(101%);
+      transition: transform 0.3s ease; /* Добавляем плавный переход для transform */
+    }
+  }
+
+  &__footer {
+    padding-top: var(--spacing-m);
+    display: flex;
+    justify-content: flex-end;
+  }
+}

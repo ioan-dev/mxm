@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  background-color: tomato;
+  background-color: var(--color-bg-primary);
 }
 
 main {
@@ -43,5 +43,29 @@ a, button {
     }
   }
 }
+
+
+//body {
+//  max-height: 100vh;
+//  overflow: hidden;
+//}
+
+.char {
+  //outline: 1px solid tomato;
+}
+
+// NOT FOUC
+
+[data-animation="hero-images-review"],
+.hero__image--move
+{
+  visibility: hidden;
+}
+
+footer {
+  visibility: hidden;
+}
+
+
 
 

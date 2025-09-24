@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.counter {
+  position: fixed;
+  right: var(--spacing-m);
+  bottom: var(--spacing-m);
+  overflow: hidden;
+  z-index: 100;
+
+  &__inner {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+
+  &__number {}
+
+  &__percentage {}
+}

@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.accordion {
+
+  &__content {}
+
+  &__item {
+
+    padding: 10px;
+    cursor: pointer;
+    border-radius: var(--border-radius-m);
+
+    @include hover() {
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+    }
+
+    &--active {
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+    }
+
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text-secondary);
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}

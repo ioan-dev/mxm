@@ -1,3 +1,4 @@
+@use "variables" as *;
 @use 'sass:math';
 @use 'functions' as *;
 
@@ -111,6 +112,22 @@
     }
   }
 }
+
+@mixin linear-gradient($deg, $clr-1, $clr-2) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+@mixin btn-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-vela);
+  font-weight: var($font-weight-semibold);
+}
+
 
 
 

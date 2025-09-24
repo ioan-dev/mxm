@@ -1,15 +1,44 @@
 :root {
   // TYPOGRAPHY
-  --font-primary: 'Montserrat', sans-serif;
+  --font-vela: 'VelaSans', sans-serif;
+  --font-inter: 'InterTight', sans-serif;
+
+  // Color
+
+  --color-bg-primary: #0D0D0D;
+  --color-bg-primary-inverse: #FBFBFB;
+  --color-bg-secondary: #1B1B1B;
+
+  --color-text-primary: #FBFBFB;
+  --color-text-primary-inverse: #0D0D0D;
+  --color-text-secondary: #656565;
+
+  // Line Height
+
+  --lh-xxs: 0.85;
+  --lh-xs: 1;
+  --lh-s: 1.1;
+  --lh-m: 1.2;
+  //--lh-l: 1;
+
+  // Letter spacing
+
+  --ls-s: -0.02em;
+  --ls-m: -0.04em;
 
   // Container size
-  --container-width: 1400px;
-  --container-padding-x: 20px;
+  --container-width: 1512px;
+  --container-padding-x: 16px;
+
+  // Radius
+
+  --border-radius-s: 2px;
+  --border-radius-m: 4px;
 
   // Section
   // Вертикальный padding для секций который нужно разделить на 2
-  // 160 / 2 = 80px
-  --section-padding-y: 80px;
+  // 210 / 2 = 105px
+  --section-padding-y: 105px;
 
   // Viewport units fix
   --100vw: 100vw;
@@ -18,5 +47,16 @@
   // Transition
   --transition-duration: 0.2s;
   --transition-duration-longer: 0.4s;
+
+//  Spacing
+
+//  --spacing-xs: 6px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 32px;
+
+//  Size
+
+  --height-letter: 117px;
 }
 

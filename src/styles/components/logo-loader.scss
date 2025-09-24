@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.logo-loader {
+
+  display: flex;
+  position: relative;
+  height: 100%;
+
+  &__m {
+    height: var(--height-letter);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .svg-letter-m {
+  }
+
+  &__ax {
+    position: absolute;
+    height: var(--height-letter);
+    width: 220px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__a {
+    height: var(--height-letter);
+  }
+
+  .svg-letter-a {
+  }
+
+  &__x {
+    height: var(--height-letter);
+  }
+
+  .svg-letter-x {}
+
+
+  &__xm {
+    display: flex;
+  }
+
+  &__x-figure {
+    flex-shrink: 0;
+    height: var(--height-letter);
+    overflow: hidden;
+  }
+
+  &__m-move {
+    height: var(--height-letter);
+  }
+
+  &__letter-wrapper {
+    display: flex;
+  }
+
+
+}
