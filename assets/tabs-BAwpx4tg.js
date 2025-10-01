@@ -1,4 +1,4 @@
-import { g as gsapWithCSS } from "./index-CPjB9Xy2.js";
+import { g as gsapWithCSS } from "./index-CUhG7ImZ.js";
 import { S as ScrollTrigger, a as ScrollSmoother } from "./ScrollSmoother-ChEnQjVM.js";
 gsapWithCSS.registerPlugin(ScrollTrigger, ScrollSmoother);
 document.addEventListener("DOMContentLoaded", () => {

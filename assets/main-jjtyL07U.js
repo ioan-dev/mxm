@@ -1,4 +1,4 @@
-import { g as gsapWithCSS } from "./index-CPjB9Xy2.js";
+import { g as gsapWithCSS } from "./index-CUhG7ImZ.js";
 import { S as ScrollTrigger, a as ScrollSmoother } from "./ScrollSmoother-ChEnQjVM.js";
 /*!
  * SplitText 3.13.0
@@ -1811,56 +1811,9 @@ function scaleLogo() {
   });
   tl.to(logo, { scale: 0.4, duration: 1, transformOrigin: "top left" }).to(logoText, { autoAlpha: 0, yPercent: -300 }, "<");
 }
-gsapWithCSS.registerPlugin(SplitText);
-function aboutSplit() {
-  let subHeaders = document.querySelectorAll('[data-split="about-subheader"]');
-  return document.fonts.ready.then(() => {
-    const splitSubheader = SplitText.create(subHeaders, {
-      type: "words, chars",
-      charsClass: "char",
-      wordsClass: "word",
-      mask: "words"
-    });
-    return {
-      // title: splitTitle,
-      subheader: splitSubheader
-    };
-  });
-}
-gsapWithCSS.registerPlugin(ScrollTrigger, SplitText);
-async function aboutAnimation() {
-  document.querySelectorAll('[data-split="about-subheader"]');
-  let split = await aboutSplit();
-  let mindLetter = gsapWithCSS.utils.toArray('[data-about="mind-letter"]');
-  let xFigure = gsapWithCSS.utils.toArray('[data-about="x-figure"]');
-  let matterLetter = gsapWithCSS.utils.toArray('[data-about="matter-letter"]');
-  gsapWithCSS.set(split == null ? void 0 : split.subheader.masks, { y: "-20vw" });
-  gsapWithCSS.set(split == null ? void 0 : split.subheader.chars, { yPercent: 102 });
-  gsapWithCSS.set([mindLetter, xFigure, matterLetter], { yPercent: 101 });
-  let tlLetter = gsapWithCSS.timeline({
-    scrollTrigger: {
-      trigger: split.subheader.words,
-      start: "top 60%"
-      // markers: true,
-    }
-  });
-  tlLetter.to(split == null ? void 0 : split.subheader.chars, { yPercent: 0, stagger: 0.01 });
-  let tlWordsMove = gsapWithCSS.timeline({
-    scrollTrigger: {
-      trigger: split.subheader.masks,
-      start: "top 40%",
-      end: "bottom -20%",
-      // markers: true,
-      scrub: 0.8,
-      once: true
-    }
-  });
-  tlWordsMove.to(split == null ? void 0 : split.subheader.masks, { y: 0, duration: 2, stagger: 0.1 }).to(mindLetter, { yPercent: 0, stagger: -0.01, duration: 2 }, "<").to(xFigure, { yPercent: 0, duration: 2 }, "<+=0.2").to(matterLetter, { yPercent: 0, stagger: -0.01, duration: 2 }, "<+=0.2");
-}
-gsapWithCSS.registerPlugin(ScrollTrigger, ScrollSmoother);
 function services() {
-  document.querySelectorAll(".accordion").forEach((accordion2) => {
-    const items = accordion2.querySelectorAll(".accordion__item");
+  document.querySelectorAll(".accordion").forEach((accordion) => {
+    const items = accordion.querySelectorAll(".accordion__item");
     items.forEach((item) => {
       item.querySelector(".accordion__header");
       const content = item.querySelector(".accordion__content");
@@ -1897,75 +1850,6 @@ function services() {
     });
   });
 }
-function team() {
-  const teamItems = document.querySelectorAll(".team__item");
-  const showImage = document.querySelector(".team__show-image img");
-  const showName = document.querySelector(".team__show-name");
-  const showPost = document.querySelector(".team__show-post");
-  let isAnimating = false;
-  function updateTeamShow(name, post, imageSrc, activeItem) {
-    if (isAnimating) return;
-    teamItems.forEach((item) => item.classList.remove("active"));
-    activeItem.classList.add("active");
-    isAnimating = true;
-    gsapWithCSS.to([showName, showPost, showImage], {
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.out",
-      onComplete: () => {
-        showName.textContent = name;
-        showPost.textContent = post;
-        showImage.src = imageSrc;
-        gsapWithCSS.to([showName, showPost, showImage], {
-          opacity: 1,
-          duration: 0.3,
-          ease: "power2.in",
-          onComplete: () => {
-            isAnimating = false;
-          }
-        });
-      }
-    });
-  }
-  teamItems.forEach((item) => {
-    item.addEventListener("mouseenter", () => {
-      const name = item.getAttribute("data-team-name");
-      const post = item.getAttribute("data-team-post");
-      const imageSrc = item.querySelector("img").src;
-      updateTeamShow(name, post, imageSrc, item);
-    });
-  });
-  const firstItem = teamItems[0];
-  firstItem.classList.add("active");
-  updateTeamShow(
-    firstItem.getAttribute("data-team-name"),
-    firstItem.getAttribute("data-team-post"),
-    firstItem.querySelector("img").src,
-    firstItem
-  );
-}
-function accordion() {
-  document.querySelectorAll(".accordion").forEach((accordion2) => {
-    const items = accordion2.querySelectorAll(".accordion__item");
-    items.forEach((item) => {
-      item.querySelector(".accordion__header");
-      const content = item.querySelector(".accordion__content");
-      content.style.maxHeight = "0px";
-      item.addEventListener("click", () => {
-        const isOpen = content.style.maxHeight !== "0px";
-        items.forEach((otherItem) => {
-          const otherContent = otherItem.querySelector(".accordion__content");
-          otherContent.style.maxHeight = "0px";
-          otherItem.classList.remove("is-open");
-        });
-        if (!isOpen) {
-          content.style.maxHeight = content.scrollHeight + "px";
-          item.classList.add("is-open");
-        }
-      });
-    });
-  });
-}
 function favoritesAnimation() {
   document.querySelector('[data-animation="favorites"]');
   const items = document.querySelectorAll(".favorites__item");
@@ -1986,6 +1870,22 @@ function favoritesAnimation() {
     });
   });
 }
+gsapWithCSS.registerPlugin(SplitText);
+function aboutSplit() {
+  let subHeaders = document.querySelectorAll('[data-split="about-subheader"]');
+  return document.fonts.ready.then(() => {
+    const splitSubheader = SplitText.create(subHeaders, {
+      type: "words, chars",
+      charsClass: "char",
+      wordsClass: "word",
+      mask: "words"
+    });
+    return {
+      // title: splitTitle,
+      subheader: splitSubheader
+    };
+  });
+}
 gsapWithCSS.registerPlugin(ScrollTrigger, ScrollSmoother);
 document.addEventListener("DOMContentLoaded", () => {
   init();
@@ -1994,23 +1894,62 @@ function init() {
   preloader();
   ScrollSmoother.create({
     smooth: 1,
-    effects: true,
     smoothTouch: 0.1
   });
-  ScrollTrigger.create({
-    id: "hero",
-    trigger: ".hero",
-    pinnedContainer: ".hero",
-    start: "top top",
-    end: "bottom bottom",
-    // markers: true,
-    pin: ".hero__inner"
+  gsapWithCSS.timeline({
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "bottom bottom",
+      pin: ".hero__fixed"
+    }
   });
   favoritesAnimation();
   moveImages();
   scaleLogo();
   aboutAnimation();
   services();
-  team();
-  accordion();
+  const teamGrid = document.querySelector(".team__grid");
+  const miniatures = document.querySelectorAll(".team__item");
+  const showBlocks = document.querySelectorAll(".team__show");
+  teamGrid.addEventListener("mouseenter", (e) => {
+    const miniature = e.target.closest(".team__item");
+    if (!miniature) return;
+    const index = Array.from(miniatures).indexOf(miniature);
+    miniatures.forEach((item) => item.classList.remove("team__item--active"));
+    showBlocks.forEach((block) => block.classList.remove("team__show--active"));
+    miniature.classList.add("team__item--active");
+    if (showBlocks[index]) {
+      showBlocks[index].classList.add("team__show--active");
+    }
+  }, true);
+  async function aboutAnimation() {
+    document.querySelectorAll('[data-split="about-subheader"]');
+    let split = await aboutSplit();
+    let mindLetter = gsapWithCSS.utils.toArray('[data-about="mind-letter"]');
+    let xFigure = gsapWithCSS.utils.toArray('[data-about="x-figure"]');
+    let matterLetter = gsapWithCSS.utils.toArray('[data-about="matter-letter"]');
+    gsapWithCSS.set(split == null ? void 0 : split.subheader.masks, { y: "-20vw" });
+    gsapWithCSS.set(split == null ? void 0 : split.subheader.chars, { yPercent: 102 });
+    gsapWithCSS.set([mindLetter, xFigure, matterLetter], { yPercent: 101 });
+    let tlLetter = gsapWithCSS.timeline({
+      scrollTrigger: {
+        trigger: split.subheader.words,
+        start: "top 60%"
+        // markers: true,
+      }
+    });
+    tlLetter.to(split == null ? void 0 : split.subheader.chars, { yPercent: 0, stagger: 0.01 });
+    let tlWordsMove = gsapWithCSS.timeline({
+      scrollTrigger: {
+        trigger: split.subheader.masks,
+        start: "top 40%",
+        end: "bottom -20%",
+        // markers: true,
+        scrub: 0.8,
+        once: true
+      }
+    });
+    tlWordsMove.to(split == null ? void 0 : split.subheader.masks, { y: 0, duration: 2, stagger: 0.1 }).to(mindLetter, { yPercent: 0, stagger: -0.01, duration: 2 }, "<").to(xFigure, { yPercent: 0, duration: 2 }, "<+=0.2").to(matterLetter, { yPercent: 0, stagger: -0.01, duration: 2 }, "<+=0.2");
+  }
 }
