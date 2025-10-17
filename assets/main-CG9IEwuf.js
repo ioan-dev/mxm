@@ -10522,7 +10522,6 @@ function init() {
   gsapWithCSS.set(images, { yPercent: 100, autoAlpha: 1 });
   preloader();
   setCorrectHeight();
-  window.addEventListener("resize", setCorrectHeight);
   let heroSliderInit = heroSlider();
   aboutAnimation();
   mobileMenu();
