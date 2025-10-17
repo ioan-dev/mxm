@@ -2018,20 +2018,25 @@ a[class] {
   }
 }
 
+@media (min-width: 1024px) {
+  .home .header__logo {
+    display: none;
+  }
+}
+
 .projects__grid {
   padding-top: 2rem;
-}
-.projects__nav-wrapper {
-  grid-column: span 3;
+  align-items: start;
 }
 .projects__spacer {
   height: 70vh;
 }
 .projects__nav {
-  grid-column: span 3;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+  height: auto;
+  border: 0.0625rem solid tomato;
 }
 .projects__nav-item {
   width: 100%;
@@ -2053,11 +2058,17 @@ a[class] {
 .projects__nav-item span {
   color: inherit;
 }
+.projects__nav-fixed {
+  grid-column: span 3;
+  border: 0.0625rem solid white;
+  height: auto;
+}
 .projects__content {
   grid-column: span 8/-1;
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
+  border: 0.0625rem solid blue;
 }
 .projects__content-item {
   display: grid;
