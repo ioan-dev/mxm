@@ -1,4 +1,4 @@
-import "./main-BvDMBVPT.js";
+import "./main-C5cM47GB.js";
 import { g as gsapWithCSS } from "./index-gFnrFzm-.js";
 import { S as ScrollTrigger } from "./ScrollTrigger-TMm1qpFj.js";
 import { S as ScrollSmoother } from "./ScrollSmoother-Dklour7k.js";

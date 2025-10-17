@@ -1,17 +1,9 @@
-import "./main-BvDMBVPT.js";
-import { S as ScrollSmoother } from "./ScrollSmoother-Dklour7k.js";
+import "./main-C5cM47GB.js";
 document.addEventListener("DOMContentLoaded", () => {
   init();
 });
 function init() {
-  initScrollSmoother();
   mobileMenu();
-  function initScrollSmoother() {
-    ScrollSmoother.create({
-      smooth: 1,
-      smoothTouch: 0.1
-    });
-  }
   function mobileMenu() {
     const mobileMenu2 = document.querySelector(".mobile-menu");
     const menuBurger = document.querySelector(".header__burger");

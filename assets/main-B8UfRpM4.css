@@ -2167,6 +2167,7 @@ a[class] {
   }
   .projects__grid {
     padding-top: 10rem;
+    padding-bottom: 6.25rem;
   }
 }
 @media (max-width: 767px) {
