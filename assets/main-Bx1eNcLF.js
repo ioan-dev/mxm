@@ -1,4 +1,4 @@
-import "./main-B-L8NGXG.js";
+import "./main-IG2E9_0q.js";
 import { g as gsapWithCSS } from "./index-gFnrFzm-.js";
 import { S as ScrollTrigger, a as ScrollSmoother } from "./ScrollSmoother-ChEnQjVM.js";
 import { S as SplitText } from "./SplitText-gyKzut0F.js";
@@ -10782,7 +10782,6 @@ function init() {
           gsapWithCSS.set([logoLetter, loaderText], { yPercent: 102 });
           gsapWithCSS.set([logoLetter, loaderText], { autoAlpha: 1, duration: 0.01 });
           gsapWithCSS.set(hero, { yPercent: 100 });
-          gsapWithCSS.set(loader, { autoAlpha: 1, duration: 0.01 });
           let master = gsapWithCSS.timeline({
             onComplete: () => {
               document.body.classList.toggle("is-loading");

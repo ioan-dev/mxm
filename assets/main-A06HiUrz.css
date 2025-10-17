@@ -167,7 +167,7 @@ svg * {
 :root {
   --font-vela: "VelaSans", sans-serif;
   --font-inter: "InterTight", sans-serif;
-  --color-bg-primary: #b51d1d;
+  --color-bg-primary: #0D0D0D;
   --color-bg-primary-inverse: #FBFBFB;
   --color-bg-secondary: #1B1B1B;
   --color-text-primary: #FBFBFB;
@@ -696,7 +696,6 @@ a[class] {
   z-index: 91;
   padding-top: var(--spacing-m);
   pointer-events: none;
-  visibility: hidden;
 }
 .loader svg {
   flex: none;
