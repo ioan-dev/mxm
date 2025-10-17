@@ -167,7 +167,7 @@ svg * {
 :root {
   --font-vela: "VelaSans", sans-serif;
   --font-inter: "InterTight", sans-serif;
-  --color-bg-primary: #0D0D0D;
+  --color-bg-primary: #b51d1d;
   --color-bg-primary-inverse: #FBFBFB;
   --color-bg-secondary: #1B1B1B;
   --color-text-primary: #FBFBFB;
@@ -1938,7 +1938,7 @@ a[class] {
   .team__slider-buttons {
     padding-inline: 2.8125rem;
     position: absolute;
-    top: 50%;
+    top: 44%;
     left: 0;
     width: 100%;
     display: flex;
@@ -1965,7 +1965,7 @@ a[class] {
     position: absolute;
     width: 100%;
     left: 0;
-    top: 50%;
+    top: 44%;
     z-index: -1;
     transform: translateY(-50%);
   }
@@ -2036,7 +2036,6 @@ a[class] {
   flex-direction: column;
   row-gap: 0.5rem;
   height: auto;
-  border: 0.0625rem solid tomato;
 }
 .projects__nav-item {
   width: 100%;
@@ -2060,7 +2059,6 @@ a[class] {
 }
 .projects__nav-fixed {
   grid-column: span 3;
-  border: 0.0625rem solid white;
   height: auto;
 }
 .projects__content {
@@ -2068,7 +2066,6 @@ a[class] {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
-  border: 0.0625rem solid blue;
 }
 .projects__content-item {
   display: grid;

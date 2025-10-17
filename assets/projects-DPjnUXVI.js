@@ -1,4 +1,4 @@
-import "./main-D7gjFCXa.js";
+import "./main-B-L8NGXG.js";
 import { g as gsapWithCSS } from "./index-gFnrFzm-.js";
 import { S as ScrollTrigger, a as ScrollSmoother } from "./ScrollSmoother-ChEnQjVM.js";
 import { S as SplitText } from "./SplitText-gyKzut0F.js";
@@ -19,17 +19,11 @@ function init() {
     gsapWithCSS.utils.toArray(".projects__content-item");
     gsapWithCSS.utils.toArray(".projects__nav-item");
     let mm = gsapWithCSS.matchMedia();
-    mm.add({ isLarge: "(min-width: 1024px)", isSmall: "(max-width: 1023px)" }, (context) => {
-      let { isLarge, isSmall } = context.conditions;
-      if (isLarge) {
-        ScrollTrigger.create({
-          id: "nav",
-          trigger: ".projects__content",
-          markers: true,
-          start: "top 33.5%",
-          pin: ".projects__nav-fixed"
-        });
+    mm.add(
+      { isLarge: "(min-width: 1024px)", isSmall: "(max-width: 1023px)" },
+      (context) => {
+        let { isLarge, isSmall } = context.conditions;
       }
-    });
+    );
   }
 }

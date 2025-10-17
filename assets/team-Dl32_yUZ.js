@@ -1,4 +1,4 @@
-import "./main-D7gjFCXa.js";
+import "./main-B-L8NGXG.js";
 import { g as gsapWithCSS } from "./index-gFnrFzm-.js";
 document.addEventListener("DOMContentLoaded", () => {
   init();
