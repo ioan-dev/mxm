@@ -1,6 +1,7 @@
 import "./main-BvDMBVPT.js";
 import { g as gsapWithCSS } from "./index-gFnrFzm-.js";
-import { S as ScrollTrigger, a as ScrollSmoother } from "./ScrollSmoother-ChEnQjVM.js";
+import { S as ScrollTrigger } from "./ScrollTrigger-TMm1qpFj.js";
+import { S as ScrollSmoother } from "./ScrollSmoother-Dklour7k.js";
 import { S as SplitText } from "./SplitText-gyKzut0F.js";
 gsapWithCSS.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function init() {
   initScrollSmoother();
   initHoverSync();
+  mobileMenu();
   function initHoverSync() {
     const navItems = document.querySelectorAll(".projects__nav-item");
     const contentItems = document.querySelectorAll(".projects__content-item");
@@ -65,5 +67,39 @@ function init() {
         let { isLarge, isSmall } = context.conditions;
       }
     );
+  }
+  function mobileMenu() {
+    const mobileMenu2 = document.querySelector(".mobile-menu");
+    const menuBurger = document.querySelector(".header__burger");
+    const menuClose = document.querySelector(".mobile-menu__close");
+    const body = document.body;
+    function openMenu() {
+      mobileMenu2.classList.add("is-open");
+      body.style.overflow = "hidden";
+      menuBurger.setAttribute("aria-expanded", "true");
+    }
+    function closeMenu() {
+      mobileMenu2.classList.remove("is-open");
+      body.style.overflow = "";
+      menuBurger.setAttribute("aria-expanded", "false");
+    }
+    menuBurger.addEventListener("click", openMenu);
+    menuClose.addEventListener("click", closeMenu);
+    mobileMenu2.addEventListener("click", (e) => {
+      if (e.target === mobileMenu2) {
+        closeMenu();
+      }
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileMenu2.classList.contains("is-open")) {
+        closeMenu();
+      }
+    });
+    const menuLinks = document.querySelectorAll('[data-toggle="menu-close"]');
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
   }
 }

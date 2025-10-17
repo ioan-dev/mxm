@@ -1,6 +1,7 @@
 import "./main-BvDMBVPT.js";
 import { g as gsapWithCSS } from "./index-gFnrFzm-.js";
-import { S as ScrollTrigger, a as ScrollSmoother } from "./ScrollSmoother-ChEnQjVM.js";
+import { S as ScrollTrigger } from "./ScrollTrigger-TMm1qpFj.js";
+import { S as ScrollSmoother } from "./ScrollSmoother-Dklour7k.js";
 import { S as SplitText } from "./SplitText-gyKzut0F.js";
 /*!
  * matrix 3.13.0
