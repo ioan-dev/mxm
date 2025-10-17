@@ -1,4 +1,4 @@
-import "./main-IG2E9_0q.js";
+import "./main-BvDMBVPT.js";
 import { g as gsapWithCSS } from "./index-gFnrFzm-.js";
 import { S as ScrollTrigger, a as ScrollSmoother } from "./ScrollSmoother-ChEnQjVM.js";
 import { S as SplitText } from "./SplitText-gyKzut0F.js";
@@ -10743,15 +10743,29 @@ function init() {
             let tl = gsapWithCSS.timeline();
             tl.to(logoLetter[0], {
               yPercent: 0,
+              autoAlpha: 1,
+              // Добавь это
               duration: 0.5,
               ease: "power1.out"
             }).to(
               logoLetter[2],
-              { yPercent: 0, duration: 0.5, ease: "power1.out" },
+              {
+                yPercent: 0,
+                autoAlpha: 1,
+                // Добавь это
+                duration: 0.5,
+                ease: "power1.out"
+              },
               "<+=10%"
             ).to(
               logoLetter[1],
-              { yPercent: 0, duration: 0.5, ease: "power1.out" },
+              {
+                yPercent: 0,
+                autoAlpha: 1,
+                // Добавь это
+                duration: 0.5,
+                ease: "power1.out"
+              },
               "<+=10%"
             );
             return tl;
@@ -10780,7 +10794,6 @@ function init() {
             ".counter--adaptation .counter__numbers"
           );
           gsapWithCSS.set([logoLetter, loaderText], { yPercent: 102 });
-          gsapWithCSS.set([logoLetter, loaderText], { autoAlpha: 1, duration: 0.01 });
           gsapWithCSS.set(hero, { yPercent: 100 });
           let master = gsapWithCSS.timeline({
             onComplete: () => {
@@ -10794,17 +10807,36 @@ function init() {
           });
           master.add("start", "0").to(
             loaderText,
-            { yPercent: 0, duration: 0.4, ease: "power1.out" },
+            {
+              yPercent: 0,
+              autoAlpha: 1,
+              duration: 0.4,
+              ease: "power1.out"
+            },
             "start"
           ).to(
             ".counter--adaptation",
-            { autoAlpha: 1, duration: 1 },
+            {
+              autoAlpha: 1,
+              duration: 1
+            },
             "start+=0.2"
           ).add(logoLetterAnimation, "start+=0.2").call(counter, null, "start+=0.6").to(
             loader,
-            { yPercent: -101, duration: 0.5, ease: "power1.in" },
+            {
+              yPercent: -101,
+              duration: 0.5,
+              ease: "power1.in"
+            },
             "start+=3"
-          ).to(hero, { yPercent: 0, duration: 0.5 }, "-=20%");
+          ).to(
+            hero,
+            {
+              yPercent: 0,
+              duration: 0.5
+            },
+            "-=20%"
+          );
         }
       }
     );

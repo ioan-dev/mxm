@@ -1,4 +1,4 @@
-import "./main-IG2E9_0q.js";
+import "./main-BvDMBVPT.js";
 document.addEventListener("DOMContentLoaded", () => {
   init();
 });

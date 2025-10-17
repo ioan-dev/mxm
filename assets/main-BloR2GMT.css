@@ -253,6 +253,13 @@ a[aria-label]::before, button[aria-label]::before {
   height: 2.75rem;
 }
 
+/* Для мобильной версии */
+body.is-loading .loader__wrapper--adaptation [data-loader-mobile=letterLogo],
+body.is-loading .loader__text,
+body.is-loading .counter--adaptation {
+  opacity: 0;
+}
+
 html {
   font-size: 1.058vw;
 }
