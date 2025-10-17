@@ -1,20 +1,49 @@
 @use "../abstracts" as *;
 
 .counter {
-  position: fixed;
-  right: var(--spacing-m);
-  bottom: var(--spacing-m);
   overflow: hidden;
-  z-index: 100;
+
+  &--desktop {
+    position: fixed;
+    right: var(--spacing-m);
+    bottom: var(--spacing-m);
+    z-index: 100;
+  }
+
+  &--adaptation {
+    display: none;
+  }
+
+
 
   &__inner {
     display: flex;
-    visibility: hidden;
-    opacity: 0;
   }
 
 
   &__number {}
 
   &__percentage {}
+
+
+  @include tablet {
+
+    &--desktop {
+      display: none;
+    }
+
+    &--adaptation {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+
+      .counter__inner {
+        visibility: inherit;
+        opacity: 1;
+      }
+
+    }
+
+
+  }
 }

@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .team {
+  padding-block: 110px;
 
   &__title {
     margin-bottom: var(--spacing-m);
@@ -10,26 +11,249 @@
     align-items: start;
   }
 
-  &__show {
+  &__item {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 10;
+      inset: 0;
+      background-color: var(--color-bg-primary);
+      opacity: 0.5;
+      transition: opacity 0.3s ease; // Плавный переход для оверлея
+    }
+
+    &.team__item--active::before {
+      opacity: 0; // Убираем оверлей для активной миниатюры
+    }
+  }
+
+  &__show-wrapper {
+    position: relative;
+    min-height: 400px;
     grid-column: 1 / span 4;
+  }
+
+  &__show {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
     row-gap: var(--spacing-m);
+    transition: opacity 0.3s ease;
+
+    opacity: 0;
 
     &-image {
+      object-fit: cover;
+    }
+
+    &--active {
+      opacity: 1;
     }
 
     &-footer {
+      position: relative;
+      overflow: hidden;
       display: flex;
       justify-content: space-between;
+    }
+
+    &-post {
+      color: var(--color-text-secondary);
     }
   }
 
   &__miniatures {
     grid-column: 5 / span 8;
-
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include tablet-above {
+
+    .team__slider-mobile,
+    .team__slider-buttons,
+    .team__slider-miniatures {
+      display: none;
+    }
+
+  }
+
+  @include tablet {
+    padding-block: 80px;
+
+    &__inner {
+      position: relative;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 50%;
+        width: 100px;
+        opacity: 0.6;
+        z-index: 10;
+        transform: translateY(-50%);
+      }
+
+      &:after {
+        left: 0;
+        background: linear-gradient(90deg, #0d0d0d 0%, rgba(13, 13, 13, 0) 100%);
+      }
+
+      &:before {
+        right: 0;
+        background: linear-gradient(270deg, #0d0d0d 0%, rgba(13, 13, 13, 0) 100%);
+      }
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__grid {
+      display: none;
+    }
+
+    &__slider {
+
+      &-mobile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+      }
+
+      &-main {
+        max-width: 368px;
+        background: var(--color-bg-primary);
+      }
+
+      &-card {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+      }
+
+      &-image {
+        width: 368px;
+        height: 368px;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-text-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-buttons {
+        padding-inline: 45px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 20;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      /* Стилизуем как хотим */
+      &-prev-btn,
+      &-next-btn {
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        background: transparent;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        pointer-events: auto;
+      }
+
+      &-miniatures {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        z-index: -1;
+        transform: translateY(-50%);
+
+        &-card {
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--color-bg-primary);
+            opacity: 0.6;
+          }
+        }
+      }
+
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    padding-block: 50px;
+
+    &__slider {
+
+      &-mobile {
+        position: relative;
+      }
+
+      &-main {
+        max-width: 140px;
+        background: var(--color-bg-primary);
+      }
+
+      &-card {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+      }
+
+      &-image {
+        width: 140px;
+        height: 140px;
+      }
+
+      &-text-wrapper {
+        flex-direction: column;
+      }
+
+      &-buttons {
+        padding-inline: 12px;
+      }
+
+      /* Стилизуем как хотим */
+      &-prev-btn,
+      &-next-btn {
+        width: 24px;
+        height: 24px;
+      }
+
+    }
   }
 }

@@ -36,20 +36,24 @@
     position: relative;
     overflow: hidden;
 
-    &::before {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background: rgba(#0D0D0D, 0.8);
-      transition: opacity 0.3s ease; /* Добавляем плавный переход для opacity */
+    @include tablet-above {
+      &::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: rgba(#0D0D0D, 0.8);
+        transition: opacity 0.4s ease; /* Добавляем плавный переход для opacity */
+      }
     }
+
 
     img {
       width: 100%;
     }
   }
 
-  &__image {}
+  &__image {
+  }
 
   &__case-name {
     display: flex;
@@ -57,14 +61,80 @@
     overflow: hidden;
 
     span {
-      transform: translateY(101%);
-      transition: transform 0.3s ease; /* Добавляем плавный переход для transform */
+      font-family: var(--font-vela);
+      font-weight: $font-weight-semibold;
+      font-size: 20px;
+      line-height: var(--lh-s);
+      letter-spacing: var(--ls-s);
     }
+
+    @include tablet-above {
+      span {
+        transform: translateY(101%);
+        transition: transform 0.4s ease; /* Добавляем плавный переход для transform */
+      }
+    }
+
+
   }
 
   &__footer {
     padding-top: var(--spacing-m);
     display: flex;
     justify-content: flex-end;
+  }
+
+  @include tablet {
+    padding-top: 80px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    .favorites__item:nth-of-type(n + 13) {
+      display: none;
+    }
+
+    &__footer {
+      padding-top: 24px;
+    }
+
+    &__link {
+      width: 100%;
+    }
+
+    &__case-name {
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-block: 50px;
+
+
+    &__item {
+      grid-column: span 4;
+
+      row-gap: 4px;
+    }
+
+
+    &__item:nth-of-type(n + 9) {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__grid {
+      row-gap: 16px;
+    }
+
+    &__footer {
+      padding-top: 32px;
+    }
   }
 }

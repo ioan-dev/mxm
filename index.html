@@ -20,22 +20,36 @@
   <link href="/images/Favicon.png" rel="icon" />
   <title>MIND x MATTER</title>
 </head>
-<body class="is-loading">
+<body class="home is-loading">
+<!--<body>-->
 <!--HEADER-->
 
 <header class="header">
   <div class="header__inner container">
-    <!--    <a class="header__logo logo" href="/">-->
-    <!--      <img alt="" class="logo__image" src="/images/logo/logo.svg" />-->
-    <!--      &lt;!&ndash;  Тут будут буквы SVG и короткая подпись&ndash;&gt;-->
-    <!--      &lt;!&ndash;    блок logo   &ndash;&gt;-->
-    <!--    </a>-->
+    <a class="header__logo logo" href="/">
+      <svg width="100%" height="100%" viewBox="0 0 370 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 0H30.5523L62.7539 78.602H64.0891L96.3692 0H127V117H102.81V40.8322H101.867L71.4719 116.45H55.1354L24.9759 40.6752H24.0334V117H0V0Z"
+          fill="#FBFBFB" />
+        <path
+          d="M243 0H273.552L305.754 78.602H307.089L339.369 0H370V117H345.81V40.8322H344.867L314.472 116.45H298.135L267.976 40.6752H267.033V117H243V0Z"
+          fill="#FBFBFB" />
+        <path d="M183.096 67.2501L138.783 116.999H127L178.754 58.8951L183.096 67.2501Z" fill="black" />
+        <path d="M183.096 67.2501L138.783 116.999H127L178.754 58.8951L183.096 67.2501Z" fill="#FBFBFB" />
+        <path d="M195.636 53.1723L191.294 44.8172L231.217 0H243L195.636 53.1723Z" fill="black" />
+        <path d="M195.636 53.1723L191.294 44.8172L231.217 0H243L195.636 53.1723Z" fill="#FBFBFB" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M213.7 117L152.937 0.0604677L162.866 0.0604694L223.629 117H213.7Z" fill="black" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M213.7 117L152.937 0.0604677L162.866 0.0604694L223.629 117H213.7Z" fill="#FBFBFB" />
+      </svg>
+    </a>
 
     <div class="header__body">
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a class="header__nav-link link active split" href="/" data-split="header">Проекты</a>
+            <a class="header__nav-link link active split" href="projects.html" data-split="header">Проекты</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link link split" href="/" data-split="header">О нас</a>
@@ -73,7 +87,79 @@
 
 
   </div>
+  <div class="header__burger">
+    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="10" width="18" height="1" fill="currentColor" />
+      <rect x="3" y="14" width="18" height="1" fill="currentColor" />
+    </svg>
+
+  </div>
 </header>
+<div class="mobile-menu">
+  <div class="mobile-menu__inner container">
+    <div class="mobile-menu__logo" data-toggle="menu-close">
+      <svg width="100%" height="100%" viewBox="0 0 72 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 0H5.9453L12.2116 15.4517H12.4714L18.7529 0H24.7135V23H20.0062V8.02685H19.8228L13.908 22.8919H10.7291L4.86017 7.99597H4.67677V23H0V0Z"
+          fill="currentColor" />
+        <path
+          d="M47.2865 0H53.2318L59.4981 15.4517H59.7579L66.0394 0H72V23H67.2927V8.02685H67.1093L61.1945 22.8919H58.0155L52.1467 7.99597H51.9633V23H47.2865V0Z"
+          fill="currentColor" />
+        <path d="M35.6294 13.2201L27.0065 22.9999L24.7135 23L34.7847 11.5777L35.6294 13.2201Z" fill="currentColor" />
+        <path d="M35.6294 13.2201L27.0065 22.9999L24.7135 23L34.7847 11.5777L35.6294 13.2201Z" fill="currentColor" />
+        <path d="M38.0696 10.4527L37.2248 8.81023L44.9935 0H47.2865L38.0696 10.4527Z" fill="currentColor" />
+        <path d="M38.0696 10.4527L37.2248 8.81023L44.9935 0H47.2865L38.0696 10.4527Z" fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M41.5849 23L29.7607 0.0118868L31.6928 0.0118871L43.517 23H41.5849Z" fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M41.5849 23L29.7607 0.0118868L31.6928 0.0118871L43.517 23H41.5849Z" fill="currentColor" />
+      </svg>
+
+    </div>
+    <div class="mobile-menu__close">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_177_468)">
+          <path d="M6.34315 4.92893L19.0711 17.6569L18.364 18.364L5.63604 5.63604L6.34315 4.92893Z" fill="#F8F8F8" />
+          <path d="M5.28249 18.0104L18.0104 5.28249L18.7175 5.98959L5.98959 18.7175L5.28249 18.0104Z" fill="#F8F8F8" />
+        </g>
+        <defs>
+          <clipPath id="clip0_177_468">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <div class="mobile-menu__nav" data-toggle="menu-close">
+      <a href="/" class="link">Главная</a>
+      <a href="/" class="link">Проекты</a>
+      <a href="/" class="link">О нас</a>
+      <a href="/" class="link">Контакты</a>
+    </div>
+    <div class="mobile-menu__footer">
+      <button class="switcher">
+          <span class="switcher__icon">
+            <svg
+              fill="none"
+              height="100%"
+              viewBox="0 0 17 16"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.63086 8C2.63086 11.3137 5.31715 14 8.63086 14C11.9446 14 14.6309 11.3137 14.6309 8C14.6309 4.68629 11.9446 2 8.63086 2L8.63086 6.99382e-07C13.0491 3.13124e-07 16.6309 3.58172 16.6309 8C16.6309 12.4183 13.0491 16 8.63086 16C4.21258 16 0.630859 12.4183 0.630859 8C0.630858 3.58172 4.21258 1.08564e-06 8.63086 6.99382e-07L8.63086 2C5.31715 2 2.63086 4.68629 2.63086 8Z"
+                fill="currentColor"
+              />
+              <path
+                d="M8.63086 12C6.42172 12 4.63086 10.2091 4.63086 8C4.63086 5.79086 6.42172 4 8.63086 4L8.63086 12Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        <span class="switcher__text text-small split" data-split="header">Светлая тема</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 <div id="smooth-wrapper">
   <div id="smooth-content">
@@ -81,29 +167,73 @@
     <main class="main">
       <!--HERO-->
       <section class="hero">
-        <div class="hero__inner container">
-          <div class="hero__grid grid">
-            <div class="hero__item">
-              <h1 class="hero__title heading-m" data-animation="hero-title">
-                Архитектурное бюро полного цикла
-              </h1>
-            </div>
+        <div class="hero__fixed">
+          <div class="hero__inner container">
+            <div class="hero__grid grid">
+              <div class="hero__item hero__item--title">
+                <h1 class="hero__title heading-m" data-animation="hero-title">
+                  Архитектурное бюро полного цикла
+                </h1>
+              </div>
+              <div class="hero__item" data-animation="hero-images-review">
+                <img alt="" class="hero__image" src="/images/hero/1.jpg" />
+                <div class="hero__move-wrapper">
+                  <img alt="" class="hero__image hero__image--move" src="/images/hero/2.jpg" />
+                </div>
 
-            <div class="hero__item">
-              <img alt="" class="hero__image" src="/images/hero/1.jpg" data-animation="hero-images-review" />
-              <img alt="" class="hero__image hero__image--move" src="/images/hero/3.jpg" />
-            </div>
-            <div class="hero__item">
-              <img alt="" class="hero__image" src="/images/hero/2.jpg" data-animation="hero-images-review" />
-              <img alt="" class="hero__image hero__image--move" src="/images/hero/3.jpg" />
-            </div>
-            <div class="hero__item">
-              <img alt="" class="hero__image" src="/images/hero/3.jpg" />
-            </div>
-            <div class="hero__item">
-              <img alt="" class="hero__image" src="/images/hero/4.jpg" />
+              </div>
+              <div class="hero__item hero__item--inverse" data-animation="hero-images-review">
+                <img alt="" class="hero__image" src="/images/hero/3.jpg" />
+                <div class="hero__move-wrapper">
+                  <img alt="" class="hero__image hero__image--move" src="/images/hero/4.jpg" />
+                </div>
+
+              </div>
             </div>
           </div>
+        </div>
+
+        <!--        <div class="hero__spacer"></div>-->
+      </section>
+
+      <section class="hero-other">
+        <div class="hero-other__inner container">
+          <div class="hero__grid grid">
+            <div class="hero__item hero__item--inverse">
+              <img alt="" class="hero__image hero__image--inverse" src="/images/hero/5-white.jpg"
+                   data-animation="hero-images-review" />
+            </div>
+            <div class="hero__item">
+              <img alt="" class="hero__image" src="/images/hero/6.jpg" data-animation="hero-images-review" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-mobile">
+        <div class="hero-mobile__inner container">
+          <h1 class="hero-mobile__title">Архитектурное бюро полного цикла</h1>
+          <div class="hero-mobile__footer">
+            <p class="hero-mobile__text">WHERE THOUGHTS BECOME</p>
+            <p class="hero-mobile__text">SPACE</p>
+          </div>
+        </div>
+        <div class="hero-mobile__slider">
+          <div class="swiper hero-mobile__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/images/hero/1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/hero/2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/hero/3.jpg" alt="">
+              </div>
+            </div>
+        </div>
+
+
         </div>
       </section>
 
@@ -123,14 +253,14 @@
                      y="0px"
                      width="100%" height="100%" viewBox="0 0 302 95" enable-background="new 0 0 302 95"
                      xml:space="preserve">
-                <path fill="currentColor" d="M295.7,22c-3.7-7-8.9-12.4-15.7-16.2c-6.8-3.8-14.9-5.7-24.4-5.7h-13.8h-11.3h-8.4v94h8.8h11h13.5
+                <path data-about="mind-letter" fill="currentColor" d="M295.7,22c-3.7-7-8.9-12.4-15.7-16.2c-6.8-3.8-14.9-5.7-24.4-5.7h-13.8h-11.3h-8.4v94h8.8h11h13.5
                   c9.5,0,17.7-1.9,24.6-5.6c6.8-3.8,12.1-9.2,15.7-16.2c3.7-7,5.5-15.4,5.5-25.2C301.2,37.3,299.4,29,295.7,22z M278.4,64.2
                   c-2,4.4-5,7.7-9.1,9.8c-4,2.1-8.9,3.1-14.9,3.1h-12.6V17.2h12.7c5.9,0,10.8,1.1,14.8,3.2c4,2.1,7.1,5.3,9.1,9.7
                   c2.1,4.4,3.1,10.1,3.1,17C281.5,54.1,280.5,59.8,278.4,64.2z" />
-                <path fill="currentColor"
+                <path data-about="mind-letter" fill="currentColor"
                       d="M215.4,0.1v94h-17.3L157.1,35h-0.8v59.1h-19.9v-94h17.5l40.8,59.1h0.8V0.1H215.4z" />
-                <path fill="currentColor" d="M129.5,0.1v94h-20v-94H129.5z" />
-                <polygon fill="currentColor" points="77.7,0.1 51.7,63.3 50.6,63.3 24.8,0.1 0.2,0.1 0.2,94.1 19.5,94.1 19.5,32.8 20.3,32.8 44.5,93.7
+                <path data-about="mind-letter" fill="currentColor" d="M129.5,0.1v94h-20v-94H129.5z" />
+                <polygon data-about="mind-letter" fill="currentColor" points="77.7,0.1 51.7,63.3 50.6,63.3 24.8,0.1 0.2,0.1 0.2,94.1 19.5,94.1 19.5,32.8 20.3,32.8 44.5,93.7
                   57.7,93.7 82.1,33 82.9,33 82.9,94.1 102.3,94.1 102.3,0.1 " />
                 </svg>
 
@@ -140,7 +270,7 @@
                 <span class="about__icon">
                                     <?xml version="1.0" encoding="utf-8"?>
                   <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  <svg data-about="x-figure" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                        height="100%" viewBox="0 0 94 94" enable-background="new 0 0 94 94" xml:space="preserve">
                   <path d="M45.1,54L9.6,94H0.1l41.5-46.7L45.1,54z" />
@@ -154,7 +284,7 @@
                 </span>
 
                 <div class="about__word-wrapper">
-                  <p class="about__subtext" data-split="about-subheader" >Space</p>
+                  <p class="about__subtext" data-split="about-subheader">Space</p>
                   <span class="about__matter">
                             <?xml version="1.0" encoding="utf-8"?>
                     <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -162,16 +292,17 @@
                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="100%" height="100%" viewBox="0 0 483 95" enable-background="new 0 0 483 95"
                    xml:space="preserve">
-              <path fill="currentColor" d="M460.6,94.6h21.9l-19.9-36.5c0.3-0.1,0.6-0.2,0.8-0.4c5.1-2.4,9-5.8,11.7-10.3c2.7-4.5,4-9.9,4-16.1
+              <path data-about="matter-letter" fill="currentColor" d="M460.6,94.6h21.9l-19.9-36.5c0.3-0.1,0.6-0.2,0.8-0.4c5.1-2.4,9-5.8,11.7-10.3c2.7-4.5,4-9.9,4-16.1
                 s-1.3-11.6-4-16.2c-2.6-4.6-6.5-8.2-11.5-10.7c-5-2.5-11-3.8-18.1-3.8h-37v94h19.8V61.3h14.5L460.6,94.6z M428.3,16.9h13.4
                 c3.8,0,7,0.6,9.5,1.7c2.5,1.1,4.4,2.7,5.6,4.9c1.3,2.1,1.9,4.7,1.9,7.9c0,3.1-0.6,5.7-1.9,7.8c-1.2,2.1-3.1,3.6-5.6,4.7
                 c-2.5,1.1-5.6,1.6-9.4,1.6h-13.5V16.9z" />
-              <path fill="currentColor" d="M338.9,94.6v-94h63.4V17h-43.6v22.1H399v16.1h-40.3v23h43.7v16.4H338.9z" />
-              <path fill="currentColor" d="M258.4,17V0.6h77V17h-28.7v77.6h-19.6V17H258.4z" />
-              <path fill="currentColor" d="M181.5,17V0.6h77V17h-28.7v77.6h-19.6V17H181.5z" />
-              <path fill="currentColor" d="M173.3,94.6h21.1l-32.2-94h-25.5l-32.3,94h21.2l6.9-21.4h33.8L173.3,94.6z M137.5,57.6L149,22.1h0.8
+              <path data-about="matter-letter" fill="currentColor"
+                    d="M338.9,94.6v-94h63.4V17h-43.6v22.1H399v16.1h-40.3v23h43.7v16.4H338.9z" />
+              <path data-about="matter-letter" fill="currentColor" d="M258.4,17V0.6h77V17h-28.7v77.6h-19.6V17H258.4z" />
+              <path data-about="matter-letter" fill="currentColor" d="M181.5,17V0.6h77V17h-28.7v77.6h-19.6V17H181.5z" />
+              <path data-about="matter-letter" fill="currentColor" d="M173.3,94.6h21.1l-32.2-94h-25.5l-32.3,94h21.2l6.9-21.4h33.8L173.3,94.6z M137.5,57.6L149,22.1h0.8
                 l11.5,35.6H137.5z" />
-              <path fill="currentColor"
+              <path data-about="matter-letter" fill="currentColor"
                     d="M0.6,0.6h24.5L51,63.8H52L78,0.6h24.6v94H83.1V33.4h-0.8L58,94.2H44.8L20.6,33.3h-0.8v61.3H0.6V0.6z" />
               </svg>
 
@@ -184,11 +315,11 @@
 
             <div class="about__body">
               <div class="about__text">
-                <p class="text-medium">
+                <p>
                   Cоздаём и реализуем уникальные архитектурные и
                   градостроительныe решения, от идеи до результата.
                 </p>
-                <p class="text-medium">
+                <p>
                   К нам приходят за сильными архитектурными решениями, на стыке
                   смысла и красоты, инженерной точности и экономики проекта.
                 </p>
@@ -225,7 +356,7 @@
               </div>
             </div>
 
-            <div class="favorites__item favorites__item--active" data-case="soho-surfside">
+            <div class="favorites__item" data-case="soho-surfside">
               <div class="favorites__image-wrapper">
                 <img
                   alt=""
@@ -465,212 +596,505 @@
           </div>
 
           <div class="favorites__footer">
-            <a class="btn" href="">Другие проекты</a>
+            <a class="favorites__link btn" href="">Другие проекты</a>
           </div>
         </div>
       </section>
 
       <!--  service-->
-
       <section class="service">
-        <div class="service__inner container">
-          <div class="service__grid grid">
-            <div class="service__head">
-              <button class="service__btn service__btn--active">Услуги</button>
-              <button class="service__btn">Виды проектов</button>
-              <button class="service__btn">Сильные стороны</button>
-            </div>
-            <div class="service__body">
-              <div class="accordion">
-                <div class="accordion__content">
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">
-                        Анализ участка и предпректные решения
-                      </p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
+        <div class="service__wrapper">
+          <div class="service__fixed">
+            <div class="service__inner container">
+              <div class="service__grid grid">
+                <div class="service__head">
+                  <button class="service__btn service__btn--active" data-service-btn="0">Услуги</button>
+                  <button class="service__btn" data-service-btn="1">Виды проектов</button>
+                  <button class="service__btn" data-service-btn="2">Сильные стороны</button>
+                </div>
+                <div class="service__body">
+                  <div data-service-accordion="0" class="accordion accordion--active">
+                    <div class="accordion__body">
+
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Анализ участка и предпроектные решения</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Разрабаотываем дизайн интерьеров квартир, вилл, домов.
+                            От
+                            идеи до рабочей документации комплектации и спопровождения стройки.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Сопровождение строительства</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Рабочая документация</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Проектная документация</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Дизайн интерьера</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Эскизный проект</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Концептуальные решения</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Консалтинг и управление проектированием</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <div data-service-accordion="1" class="accordion">
+                    <div class="accordion__body">
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Дизайн интерьера</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Эскизный проект</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Концептуальные решения</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Консалтинг и управление проектированием</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <div data-service-accordion="2" class="accordion">
+                    <div class="accordion__body">
+
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Анализ участка и предпроектные решения</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Разрабаотываем дизайн интерьеров квартир, вилл, домов.
+                            От
+                            идеи до рабочей документации комплектации и спопровождения стройки.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Сопровождение строительства</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Рабочая документация</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Проектная документация</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Дизайн интерьера</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Эскизный проект</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+                      <div class="accordion__item">
+                        <div class="accordion__header">
+                          <p class="accordion__title text-big">Концептуальные решения</p>
+                          <span class="accordion__icon">
+          <svg fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
+                  fill="currentColor" />
+          </svg>
+        </span>
+                        </div>
+                        <div class="accordion__content">
+                          <p class="accordion__text text-small">Lorem ipsum dolor sit amet,
+                            conslsdjkdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjectetur
+                            adipisicing elit. Accusamus amet deleniti dolore doloribus eius fugiat itaque labore laborum
+                            minima minus nostrum odio odit, perferendis perspiciatis possimus quae saepe unde
+                            veniam.</p>
+                        </div>
+                      </div>
+
+
                     </div>
                   </div>
 
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">
-                        Консалтинг и управление проектированием
-                      </p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">Концептуальные решения</p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">Эскизный проект</p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">Дизайн интерьера</p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">Проектная документация</p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">Рабочая документация</p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="accordion__item">
-                    <div class="accordion__item-header">
-                      <p class="text-big">Сопровождение строительства</p>
-                      <span class="accordion__icon">
-                        <svg
-                          fill="none"
-                          height="100%"
-                          viewBox="0 0 12 13"
-                          width="100%"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.89526 12.5V7.59934H0V5.37417H4.89526V0.5H7.11797V5.37417H12V7.59934H7.11797V12.5H4.89526Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
       </section>
 
-      <!--  TEAM-->
 
+      <!--  TEAM-->
       <section class="team">
         <div class="team__inner container">
           <h2 class="team__title heading-m">Наша команда</h2>
           <div class="team__grid grid">
-            <div class="team__show">
-              <div class="team__show-image">
-                <img src="/images/team/01.png" alt="">
+            <div class="team__show-wrapper">
+              <div class="team__show team__show--active">
+                <div class="team__show-image">
+                  <img src="/images/team/01.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
               </div>
-              <div class="team__show-footer">
-                <span class="team__show-name text-medium">Максим Михайлов</span>
-                <span class="team__show-post text-medium">Основатель</span>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/02.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
               </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/03.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/04.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/05.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/06.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/07.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/08.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/09.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/10.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+              <div class="team__show">
+                <div class="team__show-image">
+                  <img src="/images/team/11.png" alt="">
+                </div>
+                <div class="team__show-footer">
+                  <span class="team__show-name text-medium">Максим Михайлов</span>
+                  <span class="team__show-post text-medium">Основатель</span>
+                </div>
+              </div>
+
+
             </div>
 
+
             <div class="team__miniatures">
-              <div class="team__item" data-team-name="Алексей Иванов" data-team-post="Главный архитектор">
+              <div class="team__item team__item--active" data-team-name="Алексей Иванов"
+                   data-team-post="Главный архитектор">
                 <img src="/images/team/01.png" alt="">
               </div>
               <div class="team__item" data-team-name="Екатерина Смирнова" data-team-post="Ландшафтный дизайнер">
@@ -706,6 +1130,230 @@
             </div>
 
           </div>
+          <div class="team__slider-mobile">
+            <div class="swiper team__slider-main">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/01.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/02.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/03.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/04.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/05.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/06.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/07.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/08.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/09.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/10.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-card">
+                    <div class="team__slider-image">
+                      <img src="./public/images/team/11.png" alt="">
+                    </div>
+                    <div class="team__slider-text-wrapper">
+                      <p class="text-small">Имя Фамилия</p>
+                      <p class="text-small is-text-secondary">Должность</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/" class="team__btn btn">Вакансии</a>
+          </div>
+          <div class="team__slider-buttons">
+            <button class="team__slider-prev-btn">
+              <svg width="100%" height="100%" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.0016 28.5002L10 17.0002L21.0016 5.50024L24 8.63441L15.8353 17.0002L24 25.3661L21.0016 28.5002Z"
+                      fill="#FBFBFB" />
+              </svg>
+            </button>
+
+            <button class="team__slider-next-btn">
+              <svg width="100%" height="100%" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.9984 28.5L10 25.3658L18.1647 17L10 8.63417L12.9984 5.5L24 17L12.9984 28.5Z" fill="#FBFBFB" />
+              </svg>
+            </button>
+          </div>
+          <div class="team__slider-miniatures">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/01.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/02.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/03.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/04.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/05.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/06.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-card">
+                    <img src="./public/images/team/07.png" alt="">
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/08.png" alt="">
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/09.png" alt="">
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/10.png" alt="">
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slider-miniatures-card">
+                    <img src="./public/images/team/11.png" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -821,30 +1469,38 @@
       <div class="footer__inner container">
         <div class="footer__body">
           <div class="footer__info">
-            <a class="link" href="/">Политика конфиденциальности</a>
             <p class="text-small">
-              Нижний Новгород, Большой проспект П.С. 29А, офис 212
+              Нижний Новгород, ул.Суетинская 1а, офис 212
             </p>
+            <a class="link" href="/">Политика конфиденциальности</a>
           </div>
           <div class="footer__contacts">
             <ul class="footer__list">
               <li class="footer__item">
-                <a class="link" href="/">Inst</a>
-              </li>
-              <li class="footer__item">
                 <a class="link" href="/">Telegram</a>
               </li>
               <li class="footer__item">
-                <a class="link" href="/">WhatsApp</a>
+                <a class="link" href="/">Instagram*</a>
               </li>
               <li class="footer__item">
                 <a class="link" href="/">Email</a>
               </li>
+              <li class="footer__item">
+                <a class="link" href="/">WhatsApp</a>
+              </li>
             </ul>
+            <div class="footer__warning footer__warning--desktop">
+              <p class="p">*Instagram — проект компании Meta Platforms Inc., признанной экстремистской
+                организацией и запрещённой в РФ</p>
+            </div>
           </div>
           <div class="footer__by">
-            <span class="text-small">Ⓒ 2025</span>
             <a class="link" href="/index.html">Design by SHCH</a>
+            <span class="text-small">Ⓒ 2025</span>
+          </div>
+          <div class="footer__warning footer__warning--mobile">
+            <p class="p">*Instagram — проект компании Meta Platforms Inc., признанной экстремистской
+              организацией и запрещённой в РФ</p>
           </div>
         </div>
         <div class="footer__bg">
@@ -861,7 +1517,7 @@
 
 <div class="loader">
   <div class="loader__inner container">
-    <div class="loader__wrapper">
+    <div class="loader__wrapper loader__wrapper--desktop">
       <div class="loader__row loader__row--top">
         <div class="logo-loader__wrapper">
           <div class="logo-loader">
@@ -971,7 +1627,7 @@
 
         </div>
       </div>
-      <div class="loader__row">
+      <div class="loader__row loader__row--bottom">
         <div class="loader__item loader__item--architecture">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1085,12 +1741,43 @@
         </div>
       </div>
     </div>
+    <div class="loader__wrapper loader__wrapper--adaptation">
+      <div class="loader__mask">
+        <p class="loader__text">Max Mikhailov Architecture</p>
+      </div>
+      <div class="counter counter--adaptation">
+        <div class="counter__inner">
+          <span class="counter__numbers">0</span>
+          <span class="counter__percentage">%</span>
+        </div>
+
+      </div>
+      <div class="logo-loader-adaptation">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px"
+             width="100%" height="100%" viewBox="0 0 736 234" enable-background="new 0 0 736 234" xml:space="preserve">
+        <path data-loader-mobile="letterLogo" fill="currentColor"
+              d="M0,0h60.8l64.1,157.2h2.7L191.7,0h60.9v234h-48.1V81.7h-1.9l-60.5,151.2h-32.5l-60-151.6h-1.9V234H0V0z" />
+          <path data-loader-mobile="letterLogo" fill="currentColor"
+                d="M483.4,0h60.8l64.1,157.2h2.7L675.1,0H736v234h-48.1V81.7H686l-60.5,151.2H593l-60-151.6h-1.9V234h-47.8V0z"
+          />
+          <g data-loader-mobile="letterLogo">
+          <path fill="currentColor" d="M364.2,134.5L276.1,234l-23.4,0l102.9-116.2L364.2,134.5z" />
+            <path fill="currentColor" d="M389.2,106.3l-8.6-16.7L459.9,0h23.4L389.2,106.3z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"
+                  d="M425.1,234L304.2,0.1l19.8,0L444.8,234H425.1z" />
+        </g>
+        </svg>
+
+
+      </div>
+    </div>
   </div>
 </div>
 
 <!--Counter-->
 
-<div class="counter">
+<div class="counter counter--desktop">
   <div class="counter__inner">
     <span class="counter__numbers text-preloader">0</span>
     <span class="counter__percentage text-preloader">%</span>

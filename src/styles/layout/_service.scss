@@ -2,6 +2,15 @@
 
 .service {
   padding-block: var(--section-padding-y);
+  //border: 1px solid blueviolet;
+
+  &__wrapper {
+    height: 200vh;
+  }
+
+  &__inner {
+    //height: 100vh;
+  }
 
   &__head {
     grid-column: span 3;
@@ -30,5 +39,64 @@
 
   &__body {
     grid-column: 5 / span 8;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
   }
+
+  @include tablet {
+    padding-block: 80px;
+
+    &__wrapper {
+      height: auto;
+    }
+
+    &__grid {
+      row-gap: 24px;
+    }
+
+    &__head {
+      grid-column: 1 /-1;
+
+      row-gap: 6px;
+    }
+
+    &__btn {
+      font-size: 28px;
+    }
+
+    &__body {
+      grid-column: 1 /-1;
+
+      grid-row: 2;
+    }
+
+    .accordion__body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+    }
+
+    .accordion__item {
+      background-color: var(--color-bg-secondary);
+    }
+
+
+  }
+
+  @include mobile {
+    .accordion__body {
+      row-gap: 4px;
+    }
+
+    &__btn {
+      font-size: 18px;
+    }
+
+  }
+}
+
+.divider {
+  height: 100vh;
+  border: 1px solid tomato;
 }

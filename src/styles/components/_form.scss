@@ -5,7 +5,8 @@
   flex-direction: column;
   row-gap: var(--spacing-m);
 
-  &__field {}
+  &__field {
+  }
 
   &__label {
     display: none;
@@ -29,6 +30,34 @@
   }
 
 
+  @include tablet {
+    row-gap: 6px;
 
+
+    &__consent {
+      color: var(--color-text-secondary);
+      font-size: 15px;
+
+       a {
+        font-size: inherit;
+      }
+    }
+
+  }
+
+  @include mobile {
+    &__input {
+      font-size: 9px;
+    }
+
+    &__consent {
+      color: var(--color-text-secondary);
+      font-size: 9px;
+
+       a {
+        font-size: inherit;
+      }
+    }
+  }
 
 }

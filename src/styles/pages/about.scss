@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+.about-page {
+  padding-top: 260px;
+
+  &__intro {
+    margin-bottom: 64px;
+    p {
+      font-family: var(--font-vela);
+      font-size: 38px;
+      font-weight: $font-weight-bold;
+      line-height: var(--lh-xs);
+      letter-spacing: var(--ls-m);
+
+      max-width: 98%;
+
+      @include tablet {
+        font-size: 28px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__item {
+    grid-column: span 2;
+  }
+
+  .connection {
+    padding-top: 210px;
+  }
+
+  @include tablet {
+    &__intro {
+      margin-bottom: 80px;
+    }
+
+    .connection {
+      padding-top: 140px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 180px;
+
+    &__intro {
+      margin-bottom: 32px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &__item {
+      grid-column: span 4;
+    }
+
+    .connection {
+      padding-top: 100px;
+    }
+
+  }
+
+}

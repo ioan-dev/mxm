@@ -19,11 +19,18 @@
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+
+    &--adaptation {
+      display: none;
+    }
   }
 
-  //&__surname {
-  //  flex-shrink: 0;
-  //}
+
+
+  &__surname {
+    width: 675px;
+    height: var(--height-letter);
+  }
 
   &__row {
     display: flex;
@@ -44,6 +51,7 @@
     &--mikhailov {
       display: flex;
       justify-content: flex-end;
+      align-items: end;
       max-width: 808.5px;
     }
 
@@ -67,6 +75,10 @@
     opacity: 0;
   }
 
+  &__mask {
+    overflow: hidden;
+  }
+
 
   #logo {
     display: none;
@@ -75,5 +87,65 @@
   //[data-loader="letter"] {
   //  visibility: hidden;
   //}
+
+  @include tablet {
+    padding-bottom: 25px;
+    height: 100%;
+    background: var(--color-bg-primary);
+
+
+    .logo-loader-adaptation {
+      height: auto;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+
+    .loader__wrapper--desktop {
+      display: none;
+    }
+
+    .loader__inner {
+      height: 100%;
+    }
+
+
+    .loader__wrapper--adaptation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      row-gap: 0;
+    }
+
+    .loader__text {
+      font-size: 59px;
+      font-family: var(--font-vela);
+      line-height: var(--lh-s);
+      letter-spacing: var(--ls-s);
+      font-weight: $font-weight-semibold;
+    }
+
+    .counter__numbers, .counter__percentage {
+      color: var(--color-text-secondary);
+      font-size: 20px;
+      font-family: var(--font-vela);
+      line-height: var(--lh-s);
+      letter-spacing: var(--ls-s);
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  @include mobile {
+
+    .loader__text {
+      font-size: 23px;
+    }
+    .counter__numbers, .counter__percentage {
+      font-size: 11px;
+    }
+  }
 
 }

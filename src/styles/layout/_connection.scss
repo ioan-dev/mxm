@@ -28,4 +28,60 @@
     display: flex;
     column-gap: var(--spacing-l);
   }
+
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 140px;
+
+    &__title {
+      max-width: 100%;
+      margin-bottom: 24px;
+      grid-column: 1/-1;
+    }
+
+    &__body {
+      grid-column: 1/-1;
+
+      flex-direction: column-reverse;
+      row-gap: 24px;
+    }
+
+    &__form {
+      row-gap: 12px;
+    }
+
+    &__list {
+      column-gap: 24px;
+    }
+
+    textarea {
+      height: 55px;
+    }
+
+    &__contacts {
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-block: 50px;
+    padding-bottom: 100px;
+
+    &__title {
+      //font-size: ;
+    }
+
+    textarea {
+      height: 50px;
+    }
+
+    &__contacts {
+      a {
+        font-size: 11px;
+      }
+    }
+
+  }
 }

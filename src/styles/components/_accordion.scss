@@ -2,7 +2,11 @@
 
 .accordion {
 
-  &__content {}
+  display: none;
+
+  &--active {
+    display: block;
+  }
 
   &__item {
 
@@ -20,13 +24,39 @@
       color: var(--color-text-primary);
     }
 
+    &.is-open {
+      background-color: var(--color-bg-secondary);
+
+      .accordion__title {
+        color: var(--color-text-primary);
+      }
+
+      .accordion__icon {
+        color: var(--color-text-primary);
+        transform-origin: center;
+        transform: rotate(45deg);
+      }
+    }
+
   }
 
-  &__item-header {
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--color-text-secondary);
+  }
+
+  &__title {
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
+
+    font-family: var(--font-vela);
+    font-weight: $font-weight-semibold;
+    font-size: 28px;
+    line-height: var(--lh-s);
+    letter-spacing: var(--ls-s);
+
   }
 
   &__icon {
@@ -37,7 +67,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease;
   }
 
+  &__content {
+    max-width: 610px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &__text {
+    padding-top: 12px;
+    color: var(--color-text-secondary);
+  }
+
+  @include tablet {
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  @include mobile {
+    &__title {
+      font-size: 11px;
+    }
+  }
 
 }
+
+
+

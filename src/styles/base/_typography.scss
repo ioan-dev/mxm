@@ -14,7 +14,7 @@ html {
   }
 
   @include mobile {
-    font-size: $vw-375;
+    font-size: $vw-320;
   }
 }
 
@@ -50,6 +50,14 @@ a {
   font-weight: $font-weight-bold;
   line-height: var(--lh-xs);
   letter-spacing: var(--ls-m);
+
+  @include tablet {
+    font-size: 28px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+  }
 }
 
 .text-preloader {
@@ -58,6 +66,7 @@ a {
   font-size: 161px;
   line-height: var(--lh-xxs);
   letter-spacing: var(--ls-m);
+
 }
 
 .text-big {
@@ -82,6 +91,10 @@ a {
   font-size: 15px;
   line-height: var(--lh-xs);
   letter-spacing: var(--ls-s);
+
+  @include mobile {
+    font-size: 9px;
+  }
 }
 
 .link:hover {

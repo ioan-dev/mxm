@@ -19,5 +19,17 @@
   &--full {
     width: 100%;
     min-height: 47px;
+
+    @include tablet {
+      min-height: 39px;
+    }
+
+    @include mobile {
+      min-height: 30px;
+    }
+  }
+
+  @include mobile {
+    font-size: 9px;
   }
 }

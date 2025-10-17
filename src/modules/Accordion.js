@@ -1,62 +1,33 @@
-class Accordion {
-    selectors = {
-        root: '[data-js-accordion]',
-        item: '[data-js-accordion-item]',
-        trigger: '[data-js-accordion-trigger]',
-        content: '[data-js-accordion-content]',
-    };
+function accordion() {
+  document.querySelectorAll('.accordion').forEach(accordion => {
+    const items = accordion.querySelectorAll('.accordion__item');
 
-    stateClasses = {
-        isActive: 'is-active',
-    };
+    items.forEach(item => {
+      const header = item.querySelector('.accordion__header');
+      const content = item.querySelector('.accordion__content');
 
-    config = {
-        singleActive: true,
-        allowToggle: true,
-    };
+      // Устанавливаем начальную высоту для анимации
+      content.style.maxHeight = '0px';
 
-    constructor(options = {}) {
-        this.config = {...this.config, ...options};
-        this.rootElements = document.querySelectorAll(this.selectors.root);
+      item.addEventListener('click', () => {
+        const isOpen = content.style.maxHeight !== '0px';
 
-        this.rootElements.forEach(root => {
-            const items = root.querySelectorAll(this.selectors.item);
-            this.bindEvents(items);
+
+        // Закрываем все вкладки в этом аккордеоне
+        items.forEach(otherItem => {
+          const otherContent = otherItem.querySelector('.accordion__content');
+          otherContent.style.maxHeight = '0px';
+          otherItem.classList.remove('is-open');
         });
-    }
 
-    onTriggerClick = (event) => {
-        const trigger = event.currentTarget;
-        const item = trigger.closest(this.selectors.item);
-        const content = item.querySelector(this.selectors.content);
-
-        if (this.config.singleActive) {
-            item.closest(this.selectors.root).querySelectorAll(this.selectors.item).forEach(otherItem => {
-                const otherTrigger = otherItem.querySelector(this.selectors.trigger);
-                const otherContent = otherItem.querySelector(this.selectors.content);
-                if (otherItem !== item) {
-                    otherTrigger.classList.remove(this.stateClasses.isActive);
-                    otherContent.classList.remove(this.stateClasses.isActive);
-                }
-            });
+        // Открываем текущую, если была закрыта
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          item.classList.add('is-open');
         }
-
-        if (!this.config.allowToggle && trigger.classList.contains(this.stateClasses.isActive)) {
-            return;
-        }
-
-        trigger.classList.toggle(this.stateClasses.isActive);
-        content.classList.toggle(this.stateClasses.isActive);
-    };
-
-    bindEvents(items) {
-        items.forEach(item => {
-            const trigger = item.querySelector(this.selectors.trigger);
-            if (trigger) {
-                trigger.addEventListener('click', this.onTriggerClick);
-            }
-        });
-    }
+      });
+    });
+  });
 }
 
-export default Accordion;
+export default accordion;

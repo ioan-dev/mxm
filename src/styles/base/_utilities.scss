@@ -46,12 +46,39 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  //@include mobile {
+  //  grid-template-columns: repeat(, 1fr);
+  //}
+
 }
 
 .is-loading {
   overflow: hidden;
   position: fixed;
   width: 100%;
+
+  .hero__title,
+  .header__switcher,
+  .header__btn,
+  .header__nav-link,
+  [data-animation="hero-images-review"],
+  .hero__image--move,
+  .counter--desktop .counter__inner,
+  .footer
+  {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+}
+
+.is-text-secondary {
+  color: var(--color-text-secondary);
 }
 
 .chars {

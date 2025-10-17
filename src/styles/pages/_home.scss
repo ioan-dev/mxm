@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.home {
+  @include tablet-above {
+    .header__logo {
+      display: none;
+    }
+  }
+}

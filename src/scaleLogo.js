@@ -10,16 +10,15 @@ function scaleLogo() {
 
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: trigger,
+      trigger: '.hero',
       start: 'top top',
-      end: 'end end-=500px',
-      // markers: true,
+      end: '40%',
       scrub: true,
     },
   })
 
-  tl.to(logo, {scale: 0.5, duration: 1, transformOrigin: 'top left'})
-    .to(logoText, {autoAlpha: 0}, '<')
+  tl.to(logo, {scale: 0.4, duration: 1, transformOrigin: 'top left'})
+    .to(logoText, {autoAlpha: 0, yPercent: -300}, '<')
 }
 
 export default scaleLogo

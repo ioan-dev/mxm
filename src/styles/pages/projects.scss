@@ -1,0 +1,213 @@
+@use "../abstracts" as *;
+
+.projects {
+
+  &__grid {
+    padding-top: 32px;
+    align-items: start;
+  }
+
+
+  &__spacer {
+    height: 70vh;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    height: auto;
+
+    border: 1px solid tomato;
+
+    &-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background: transparent;
+      border: none;
+
+      color: var(--color-text-secondary);
+      cursor: pointer;
+
+      @include hover {
+        color: var(--color-text-primary);
+      }
+
+
+      &.is-active {
+        color: var(--color-text-primary);
+      }
+
+      span {
+        color: inherit;
+      }
+    }
+
+
+  }
+
+  &__nav-fixed {
+    grid-column: span 3;
+    border: 1px solid white;
+    height: auto;
+  }
+
+  &__content {
+    grid-column: span 8 / -1;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    border: 1px solid blue;
+
+
+
+    &-item {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      cursor: pointer;
+
+      // Добавляем переход для плавности
+      .projects__content-image::after {
+        transition: opacity 0.6s ease;
+      }
+
+      // Когда item активен, убираем псевдоэлемент
+      &.is-active {
+        .projects__content-overlay::after {
+          opacity: 0;
+        }
+      }
+
+    }
+
+    &-overlay {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #ffffff;
+        mix-blend-mode: hue;
+      }
+    }
+
+    &-image {
+      grid-column: span 2;
+
+      img {
+        width: 100%;
+      }
+    }
+
+
+  }
+
+
+  .filters {
+    padding-top: 180px;
+
+    a {
+      //color: var(--color-text-secondary);
+      transition: color 0.2s ease; // опционально, для плавности
+
+      @include hover {
+        color: var(--color-text-primary);
+      }
+
+      &.is-active {
+        color: var(--color-text-primary);
+        // можно добавить дополнительные стили
+        font-weight: 600; // например, жирность
+        pointer-events: none; // отключить клики по активной ссылке
+      }
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__category {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 12px;
+      row-gap: 6px;
+      max-width: 740px;
+
+    }
+
+    &__geo {
+      display: flex;
+      column-gap: 12px;
+    }
+  }
+
+  @include tablet-above {
+
+    &__content-mobile {
+      display: none;
+    }
+
+  }
+
+  @include tablet {
+    .filters {
+      display: none;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__spacer {
+      display: none;
+    }
+
+    &__content {
+      grid-column: 1 / -1;
+
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      row-gap: 32px;
+    }
+
+    &__content-item {
+      display: block;
+      grid-column: span 2;
+    }
+
+    &__content-mobile {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+
+    &__content-image {
+      display: none;
+    }
+
+    &__grid {
+      padding-top: 160px;
+    }
+
+  }
+
+  @include mobile {
+
+    &__grid {
+      padding-top: 100px;
+    }
+
+    &__content-item {
+      grid-column: span 4;
+    }
+
+  }
+
+}

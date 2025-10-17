@@ -1,4 +1,3 @@
-
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 gsap.registerPlugin(SplitText)
@@ -11,20 +10,22 @@ function heroSplit() {
     const splitTitle = SplitText.create(title, {
       type: 'chars, words, lines',
       charsClass: 'char',
-      mask: "lines"
-    });
+      linesClass: 'lineParent',
+      mask: 'lines',
+    })
 
     const splitHeader = SplitText.create(headerItems, {
-      type: 'chars',
-      charsClass: 'char'
-    });
+      type: 'chars,words, lines',
+      charsClass: 'char',
+      // smartWrap: true,
+    })
 
     // Возвращаем ОБЪЕКТ с двумя split-ами
     return {
       title: splitTitle,
-      header: splitHeader
-    };
-  });
+      header: splitHeader,
+    }
+  })
 }
 
-export default heroSplit;
+export default heroSplit

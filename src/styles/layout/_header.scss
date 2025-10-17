@@ -3,6 +3,7 @@
 .header {
   //display: none;
 
+
   position: fixed;
   top: 0;
   left: 0;
@@ -10,12 +11,19 @@
   width: 100%;
   min-height: 175px;
   background: linear-gradient(180deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0) 100%);
+  pointer-events: none;
 
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
     padding-block: var(--spacing-m);
+    pointer-events: auto;
+  }
+
+  &__logo {
+    width: 370px;
+    height: 117px;
   }
 
   &__body {
@@ -23,7 +31,7 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__nav {
@@ -37,22 +45,23 @@
 
   &__nav-item {
     overflow: hidden;
+    display: flex;
+    align-items: flex-start;
   }
 
   &__nav-link {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  &__switcher {
-    visibility: hidden;
-    opacity: 0;
+    //font-kerning: none;  // 🔥 Вот это — главный фикс! Отключает браузерный кернинг
+    //-webkit-text-rendering: optimizeSpeed;  // Для Safari, если нужно (опционально)
+    //text-rendering: optimizeSpeed;
   }
 
   &__btn {
     overflow: hidden;
-    visibility: hidden;
-    opacity: 0;
+  }
+
+  .char {
+    font-kerning: none;
+    line-height: inherit;
   }
 
   &__overlay {
@@ -80,8 +89,15 @@
     column-gap: 20px;
   }
 
-  &__menu-link {
+  &__logo-mobile {
+    display: none;
+  }
 
+  &__burger {
+    display: none;
+  }
+
+  &__menu-link {
 
 
     &.is-active {
@@ -90,11 +106,55 @@
     }
   }
 
-  // Удалить
+  @include tablet {
+    min-height: 150px;
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0) 100%);
 
-  .char {
-    line-height: 1.4;
-    //border: 1px solid tomato;
+    &__body {
+      display: none;
+    }
+
+
+
+    &__logo {
+      display: block;
+      width: 184px;
+      height: 60px;
+
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+
+    &__burger {
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      pointer-events: auto;
+    }
   }
+
+  @include mobile {
+    min-height: 60px;
+
+    &__logo {
+      width: 72px;
+      height: 23px;
+    }
+
+    &__burger {
+      width: 24px;
+      height: 24px;
+
+      right: 14px;
+      top: 16px;
+    }
+
+  }
+
 
 }

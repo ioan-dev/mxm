@@ -23,15 +23,38 @@
     flex-direction: column;
     row-gap: 4px;
     margin-right: 220px;
+
+    a {
+      color: var(--color-text-secondary);
+    }
   }
 
   &__contacts {
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
   }
 
   &__list {
     display: flex;
     column-gap: 8px;
+  }
+
+  &__warning {
+    display: none;
+    color: var(--color-text-secondary);
+    font-family: var(--font-vela);
+    font-weight: $font-weight-semibold;
+    font-size: 8px;
+    line-height: var(--lh-xs);
+    letter-spacing: var(--ls-s);
+
+    &--desktop {
+      display: block;
+    }
   }
 
   &__by {
@@ -53,5 +76,108 @@
 
   &__image {
     width: 100%;
+  }
+
+
+  @include tablet {
+    visibility: visible;
+
+    &__body {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      row-gap: 24px;
+    }
+
+    &__bg {
+      bottom: 45px;
+    }
+
+    &__contacts {
+      grid-column: 1/-1;
+      grid-row: 1;
+
+      align-items: flex-start;
+
+      margin-right: 0;
+
+      p {
+        display: none;
+      }
+    }
+
+    &__info {
+      grid-column: span 4;
+      width: 100%;
+    }
+
+    &__body {
+      padding-top: 105px;
+    }
+
+    &__by {
+      grid-column: span 3/-1;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__warning {
+      grid-column: 1/-1;
+      grid-row: 3;
+
+      &--mobile {
+        display: block;
+      }
+    }
+  }
+
+  @include mobile {
+
+    &__contacts {
+
+    }
+    &__warning {
+      padding-top: 8px;
+    }
+
+    &__info {
+      grid-column: span 6;
+      margin-right: 0;
+      p, a {
+        font-size: 9px;
+      }
+    }
+
+    &__body {
+      padding-top: 0;
+    }
+
+    &__list {
+      row-gap: 2px;
+
+      a {
+        font-size: 9px;
+      }
+
+    }
+
+    &__item {
+      height: 12px;
+    }
+
+
+    &__by {
+      grid-column: span 2 / -1;
+
+      a, span {
+        font-size: 9px;
+      }
+    }
+
+    &__bg {
+      bottom: auto;
+      top: 5px;
+    }
   }
 }

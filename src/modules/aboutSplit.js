@@ -18,6 +18,7 @@ function aboutSplit() {
       type: 'words, chars',
       charsClass: 'char',
       wordsClass: 'word',
+      mask: 'words'
     });
 
     // Возвращаем ОБЪЕКТ с двумя split-ами

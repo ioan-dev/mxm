@@ -3,8 +3,8 @@
 .about {
   //display: none;
   margin-top: -70px;
-  position: relative;
-  z-index: 10;
+  //position: relative;
+  //z-index: 10;
 
   &__headline-wrapper {
     grid-column: span 8;
@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
 
   &__body {
@@ -39,8 +40,16 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--spacing-m);
-  }
 
+    p {
+      font-family: var(--font-vela);
+      font-weight: $font-weight-semibold;
+      font-size: 20px;
+      line-height: var(--lh-s);
+      letter-spacing: var(--ls-s);
+      margin-bottom: 0;
+    }
+  }
 
 
   &__word-wrapper {
@@ -77,6 +86,118 @@
   &__time {
     & span {
       color: var(--color-text-secondary);
+    }
+  }
+
+  @include tablet {
+    margin-top: 0;
+    padding-top: 64px;
+    padding-bottom: 80px;
+
+    &__grid {
+      row-gap: 48px;
+    }
+
+    &__headline-wrapper {
+      grid-column: 1/-1;
+    }
+
+    &__headline {
+      flex-wrap: wrap;
+      row-gap: var(--spacing-m);
+      column-gap: 28px;
+    }
+
+    &__icon {
+      margin-right: auto;
+    }
+
+    &__word-wrapper:has(.about__matter) {
+      margin-left: auto;
+    }
+
+    //&__headline:has(.about__matter) {
+    //  margin-left: auto;
+    //}
+
+    &__subtext {
+      display: none;
+    }
+
+    &__body {
+      padding-top: 0;
+      grid-column: 1/-1;
+      grid-row: 2;
+      row-gap: 48px;
+    }
+
+    &__text {
+      max-width: 552px;
+    }
+
+    &__mind {
+      width: 280px;
+      height: 84px;
+    }
+
+    &__icon {
+      width: 84px;
+      height: 84px;
+    }
+
+    &__matter {
+      width: 440px;
+      height: 84px;
+    }
+
+    &__time {
+      display: none;
+    }
+
+    &__link {
+      width: 100%;
+    }
+
+  }
+
+  @include mobile {
+    padding-block: 50px;
+
+    &__grid {
+      row-gap: 32px;
+    }
+
+    &__body {
+      row-gap: 32px;
+    }
+
+
+    &__text {
+      row-gap: 8px;
+
+      p {
+        font-size: 11px;
+      }
+    }
+
+    &__headline {
+      column-gap: 4px;
+      row-gap: 8px;
+    }
+
+    &__mind {
+      width: 111px;
+      height: 33px;
+    }
+
+    &__icon {
+      width: 33px;
+      height: 33px;
+    }
+
+    &__matter {
+      width: 175px;
+      height: 33px;
     }
   }
 

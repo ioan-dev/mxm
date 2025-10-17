@@ -11,8 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
    let tl = gsap.timeline({
      scrollTrigger: {
        trigger: '.hero',
-       start: 'top+=10% center',
-       markers: true
+       id: 'image',
+       start: 'top top',
+       end: '40%',
+       scrub: true,
+       // markers: true
      }
    })
 

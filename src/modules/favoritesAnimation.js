@@ -8,7 +8,7 @@ function favoritesAnimation() {
   // Проходим по каждому элементу
   items.forEach(item => {
     // При наведении на элемент
-    item.addEventListener('mouseover', () => {
+    item.querySelector('.favorites__image-wrapper').addEventListener('mouseover', () => {
       // Получаем значение data-case текущего элемента
       const caseValue = item.dataset.case;
 

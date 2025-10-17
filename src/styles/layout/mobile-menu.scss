@@ -1,0 +1,157 @@
+@use "../abstracts" as *;
+
+.mobile-menu {
+
+  @include tablet-above {
+    display: none;
+  }
+
+  @include tablet {
+    height: 100vh;
+    background: var(--color-bg-primary);
+    z-index: 100;
+    padding-block: 16px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    &.is-open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+
+    }
+
+    &__logo {
+      display: block;
+      width: 184px;
+      height: 60px;
+
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+
+    &__close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 34px;
+      height: 34px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__nav {
+      margin-block: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 6px;
+
+      a {
+        font-size: 28px;
+        color: var(--color-text-secondary);
+      }
+
+      a.is-active {
+        color: var(--color-text-primary);
+      }
+
+    }
+
+    &__footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        font-size: 20px;
+      }
+
+      .switcher__text {
+        font-size: 20px;
+      }
+
+      .switcher__icon {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &__socials {
+      display: flex;
+      column-gap: 16px;
+    }
+  }
+
+  @include mobile {
+
+    &__logo {
+      width: 72px;
+      height: 23px;
+    }
+
+
+    &__close {
+      top: 16px;
+      right: 16px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__nav {
+      a {
+        font-size: 18px;
+      }
+    }
+
+    &__footer {
+
+      a {
+        font-size: 11px;
+      }
+
+      .switcher {
+        column-gap: 4px;
+      }
+
+      .switcher__text {
+        font-size: 11px;
+      }
+
+      .switcher__icon {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &__socials {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+
+}

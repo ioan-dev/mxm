@@ -248,14 +248,14 @@ async function preloader() {
     let tl = gsap.timeline({onComplete: () => {splits.header.revert()}})
     tl.to(icon, { yPercent: 0, duration: charsDuration })
       .to(
-      charsSwitcher,
-      {
-        yPercent: 0,
-        stagger: charsStagger,
-        duration: charsDuration,
-      },
-      '<',
-    )
+        charsSwitcher,
+        {
+          yPercent: 0,
+          stagger: charsStagger,
+          duration: charsDuration,
+        },
+        '<',
+      )
 
     return tl
   }

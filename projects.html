@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    name="viewport"
+  />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <meta content="https://mxm.ru/" property="og:url" />
+  <meta content="MIND x MATTER" property="og:title" />
+  <meta
+    content="Cоздаём и реализуем уникальные архитектурные и градостроительныe решения, от идеи до результата."
+    property="og:description"
+  />
+  <meta content="website" property="og:type" />
+  <meta content="/images/OG.jpg" property="og:image" />
+  <meta content="/images/OG.jpg" property="twitter:image" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <link href="/images/Favicon.png" rel="icon" />
+  <title>MIND x MATTER</title>
+</head>
+<body class="projects">
+<!--HEADER-->
+
+<header class="header">
+  <div class="header__inner container">
+    <a class="header__logo logo" href="/">
+      <svg width="100%" height="100%" viewBox="0 0 370 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 0H30.5523L62.7539 78.602H64.0891L96.3692 0H127V117H102.81V40.8322H101.867L71.4719 116.45H55.1354L24.9759 40.6752H24.0334V117H0V0Z"
+          fill="#FBFBFB" />
+        <path
+          d="M243 0H273.552L305.754 78.602H307.089L339.369 0H370V117H345.81V40.8322H344.867L314.472 116.45H298.135L267.976 40.6752H267.033V117H243V0Z"
+          fill="#FBFBFB" />
+        <path d="M183.096 67.2501L138.783 116.999H127L178.754 58.8951L183.096 67.2501Z" fill="black" />
+        <path d="M183.096 67.2501L138.783 116.999H127L178.754 58.8951L183.096 67.2501Z" fill="#FBFBFB" />
+        <path d="M195.636 53.1723L191.294 44.8172L231.217 0H243L195.636 53.1723Z" fill="black" />
+        <path d="M195.636 53.1723L191.294 44.8172L231.217 0H243L195.636 53.1723Z" fill="#FBFBFB" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M213.7 117L152.937 0.0604677L162.866 0.0604694L223.629 117H213.7Z" fill="black" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M213.7 117L152.937 0.0604677L162.866 0.0604694L223.629 117H213.7Z" fill="#FBFBFB" />
+      </svg>
+    </a>
+
+    <div class="header__body">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link link active split" href="/" data-split="header">Проекты</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link link split" href="/" data-split="header">О нас</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link link split" href="/" data-split="header">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="header__switcher switcher">
+          <span class="switcher__icon">
+            <svg
+              fill="none"
+              height="100%"
+              viewBox="0 0 17 16"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.63086 8C2.63086 11.3137 5.31715 14 8.63086 14C11.9446 14 14.6309 11.3137 14.6309 8C14.6309 4.68629 11.9446 2 8.63086 2L8.63086 6.99382e-07C13.0491 3.13124e-07 16.6309 3.58172 16.6309 8C16.6309 12.4183 13.0491 16 8.63086 16C4.21258 16 0.630859 12.4183 0.630859 8C0.630858 3.58172 4.21258 1.08564e-06 8.63086 6.99382e-07L8.63086 2C5.31715 2 2.63086 4.68629 2.63086 8Z"
+                fill="currentColor"
+              />
+              <path
+                d="M8.63086 12C6.42172 12 4.63086 10.2091 4.63086 8C4.63086 5.79086 6.42172 4 8.63086 4L8.63086 12Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        <span class="switcher__text text-small split" data-split="header">Светлая тема</span>
+      </button>
+
+      <a class="header__btn link" href="/" data-split="header">Связаться →</a>
+    </div>
+
+
+  </div>
+  <div class="header__burger">
+    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="10" width="18" height="1" fill="currentColor" />
+      <rect x="3" y="14" width="18" height="1" fill="currentColor" />
+    </svg>
+
+  </div>
+</header>
+<div class="mobile-menu">
+  <div class="mobile-menu__inner container">
+    <div class="mobile-menu__logo" data-toggle="menu-close">
+      <svg width="100%" height="100%" viewBox="0 0 72 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 0H5.9453L12.2116 15.4517H12.4714L18.7529 0H24.7135V23H20.0062V8.02685H19.8228L13.908 22.8919H10.7291L4.86017 7.99597H4.67677V23H0V0Z"
+          fill="currentColor" />
+        <path
+          d="M47.2865 0H53.2318L59.4981 15.4517H59.7579L66.0394 0H72V23H67.2927V8.02685H67.1093L61.1945 22.8919H58.0155L52.1467 7.99597H51.9633V23H47.2865V0Z"
+          fill="currentColor" />
+        <path d="M35.6294 13.2201L27.0065 22.9999L24.7135 23L34.7847 11.5777L35.6294 13.2201Z" fill="currentColor" />
+        <path d="M35.6294 13.2201L27.0065 22.9999L24.7135 23L34.7847 11.5777L35.6294 13.2201Z" fill="currentColor" />
+        <path d="M38.0696 10.4527L37.2248 8.81023L44.9935 0H47.2865L38.0696 10.4527Z" fill="currentColor" />
+        <path d="M38.0696 10.4527L37.2248 8.81023L44.9935 0H47.2865L38.0696 10.4527Z" fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M41.5849 23L29.7607 0.0118868L31.6928 0.0118871L43.517 23H41.5849Z" fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M41.5849 23L29.7607 0.0118868L31.6928 0.0118871L43.517 23H41.5849Z" fill="currentColor" />
+      </svg>
+
+    </div>
+    <div class="mobile-menu__close">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_177_468)">
+          <path d="M6.34315 4.92893L19.0711 17.6569L18.364 18.364L5.63604 5.63604L6.34315 4.92893Z" fill="#F8F8F8" />
+          <path d="M5.28249 18.0104L18.0104 5.28249L18.7175 5.98959L5.98959 18.7175L5.28249 18.0104Z" fill="#F8F8F8" />
+        </g>
+        <defs>
+          <clipPath id="clip0_177_468">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <div class="mobile-menu__nav" data-toggle="menu-close">
+      <a href="/" class="link">Главная</a>
+      <a href="/" class="link">Проекты</a>
+      <a href="/" class="link">О нас</a>
+      <a href="/" class="link">Контакты</a>
+    </div>
+    <div class="mobile-menu__footer">
+      <div class="mobile-menu__socials" data-toggle="menu-close">
+        <a href="/" class="link">TG</a>
+        <a href="/" class="link">IG*</a>
+        <a href="/" class="link">WhatsApp</a>
+        <a href="/" class="link">Email</a>
+      </div>
+      <button class="switcher">
+          <span class="switcher__icon">
+            <svg
+              fill="none"
+              height="100%"
+              viewBox="0 0 17 16"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.63086 8C2.63086 11.3137 5.31715 14 8.63086 14C11.9446 14 14.6309 11.3137 14.6309 8C14.6309 4.68629 11.9446 2 8.63086 2L8.63086 6.99382e-07C13.0491 3.13124e-07 16.6309 3.58172 16.6309 8C16.6309 12.4183 13.0491 16 8.63086 16C4.21258 16 0.630859 12.4183 0.630859 8C0.630858 3.58172 4.21258 1.08564e-06 8.63086 6.99382e-07L8.63086 2C5.31715 2 2.63086 4.68629 2.63086 8Z"
+                fill="currentColor"
+              />
+              <path
+                d="M8.63086 12C6.42172 12 4.63086 10.2091 4.63086 8C4.63086 5.79086 6.42172 4 8.63086 4L8.63086 12Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        <span class="switcher__text text-small split" data-split="header">Светлая тема</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="smooth-wrapper">
+  <div id="smooth-content">
+    <!--MAIN-->
+    <main class="main">
+
+      <!--FILTERS-->
+      <div class="filters">
+        <div class="filters__inner container">
+          <div class="filters__category">
+            <a href="" class="link is-text-secondary is-active">Все</a>
+            <a href="" class="link is-text-secondary">Жилая архитектура</a>
+            <a href="" class="link is-text-secondary">Интерьеры</a>
+            <a href="" class="link is-text-secondary">Гостиницы и апартаменты</a>
+            <a href="" class="link is-text-secondary">Общественные пространства </a>
+            <a href="" class="link is-text-secondary">Мастерпланы и развитие территорий</a>
+            <a href="" class="link is-text-secondary">Посёлки и девелопмент</a>
+            <a href="" class="link is-text-secondary">Исследования</a>
+          </div>
+          <div class="filters__geo">
+            <a href="" class="link is-text-secondary is-active">Все</a>
+            <a href="" class="link is-text-secondary">Россия</a>
+            <a href="" class="link is-text-secondary">Бали</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects__inner container">
+        <div class="projects__grid grid">
+          <div class="projects__nav-fixed">
+            <div class="projects__nav">
+              <button class="projects__nav-item" data-index="0">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="1">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="2">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="3">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="4">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="5">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="6">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="7">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="8">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="9">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+              <button class="projects__nav-item" data-index="10">
+                <span class="projects__nav-title heading-m">Soho Surfside</span>
+                <span class="projects__nav-date text-small">2027</span>
+              </button>
+            </div>
+          </div>
+
+
+
+          <div class="projects__content">
+            <a class="projects__content-item" data-index="0">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="1">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="2">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="3">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="4">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="5">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="6">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="7">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="8">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="9">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+            <a class="projects__content-item" data-index="10">
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/2.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-image">
+                <div class="projects__content-overlay">
+                  <img src="/images/favorites/4.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="projects__content-mobile">
+                <div class="projects__mobile-image">
+                  <img src="/images/favorites/1.jpg" alt="">
+                </div>
+                <p class="text-small">Название</p>
+
+              </div>
+            </a>
+
+          </div>
+        </div>
+        <div class="projects__spacer"></div>
+      </div>
+
+
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__body">
+          <div class="footer__info">
+            <p class="text-small">
+              Нижний Новгород, ул.Суетинская 1а, офис 212
+            </p>
+            <a class="link" href="/">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__contacts">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="link" href="/">Telegram</a>
+              </li>
+              <li class="footer__item">
+                <a class="link" href="/">Instagram*</a>
+              </li>
+              <li class="footer__item">
+                <a class="link" href="/">Email</a>
+              </li>
+              <li class="footer__item">
+                <a class="link" href="/">WhatsApp</a>
+              </li>
+            </ul>
+            <p class="footer__warning">*Instagram — проект компании Meta Platforms Inc., признанной экстремистской
+              организацией и запрещённой в РФ</p>
+          </div>
+          <div class="footer__by">
+            <a class="link" href="/index.html">Design by SHCH</a>
+            <span class="text-small">Ⓒ 2025</span>
+          </div>
+          <p class="footer__warning">*Instagram — проект компании Meta Platforms Inc., признанной экстремистской
+            организацией и запрещённой в РФ</p>
+        </div>
+        <div class="footer__bg">
+          <img alt="" class="footer__image" src="/images/footer_bg.svg" />
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+
+<!--MODAL-->
+
+<script src="/src/projects.js" type="module"></script>
+</body>
+</html>
